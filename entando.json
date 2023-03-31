@@ -16,7 +16,7 @@
             "group": "free",
             "publicFolder": "public",
             "titles": {
-                "en": "conference-table",
+                "en": "E71 conference-table",
                 "it": "conference-table"
             },
             "apiClaims": [
@@ -35,7 +35,7 @@
             "group": "free",
             "publicFolder": "public",
             "titles": {
-                "en": "conference-details",
+                "en": "E71 conference-details",
                 "it": "conference-details"
             },
             "apiClaims": [
@@ -54,7 +54,7 @@
             "group": "free",
             "publicFolder": "public",
             "titles": {
-                "en": "conference-form",
+                "en": "E71 conference-form",
                 "it": "conference-form"
             },
             "apiClaims": [
@@ -71,6 +71,6 @@
     ],
     "name": "e71-jhipster-conference-rbac",
     "version": "0.0.1",
-    "description": "e71-jhipster-conference description",
+    "description": "E71 Jhipster Conference with RBAC controls",
     "type": "bundle"
 }
