@@ -1,0 +1,21 @@
+{
+  "microserviceName": "jhipster",
+  "clientRootFolder": "jhipster",
+  "databaseType": "sql",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "location",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "service": "no",
+  "readOnly": false,
+  "pagination": "no",
+  "name": "Conference",
+  "changelogDate": "20220929203210"
+}

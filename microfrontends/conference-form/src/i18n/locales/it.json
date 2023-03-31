@@ -1,0 +1,35 @@
+{
+  "error": {
+    "dataLoading": "Errore durante la connessione al server"
+  },
+  "common": {
+    "save": "Salva",
+    "dataSaved": "Conference salvato/a con successo",
+    "dataDeleted": "Conference eliminato/a con successo",
+    "notAuthenticated": "L'utente non è autenticato.",
+    "selectFile": "Carica nuovo file",
+    "selectImageFile": "Carica nuova immagine",
+    "download": "Scarica",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "yes": "Si",
+    "no": "No"
+  },
+  "validation": {
+    "required": "{{field}} è obbligatorio"
+  },
+  "entities": {
+    "conference": {
+      "deleteDialog": {
+        "title": "Elimina conference",
+        "description": "Sei sicuro/a?"
+      },
+      "notFound": "Conference non trovato/a",
+      "deleted": "Conference eliminato/a",
+      "id": "ID",
+      "id": "entità.conference.id",
+      "name": "entità.conference.name",
+      "location": "entità.conference.location"
+    }
+  }
+}
