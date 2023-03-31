@@ -1,5 +1,5 @@
 # Blueprint for a Conference entity
-The project contains a Blueprint-generated microservice and MFEs for Entando 7.1
+The project contains a Blueprint-generated microservice and MFEs for Entando 7.1 with simple RBAC checks in place for a few APIs
 
 ## Prerequisites
 1. Docker account
