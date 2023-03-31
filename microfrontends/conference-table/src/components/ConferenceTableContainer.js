@@ -21,6 +21,7 @@ import { apiConferencesGet, apiConferencesDelete } from 'api/conferences';
 import { reducer, initialState } from 'state/conference.reducer';
 import { ADD_FILTER, UPDATE_FILTER, DELETE_FILTER, CLEAR_FILTERS } from 'state/filter.types';
 import { DELETE, ERROR_FETCH, CLEAR_ERRORS, READ_ALL, CLEAR_ITEMS } from 'state/conference.types';
+import {hasKeycloakClientRole} from 'api/helpers'
 
 const styles = {
   fab: {
