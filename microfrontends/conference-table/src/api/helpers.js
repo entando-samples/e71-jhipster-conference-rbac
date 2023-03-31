@@ -10,6 +10,23 @@ export const getKeycloakToken = () => {
   return '';
 };
 
+// Check if the authenticated user has the clientRole for any Keycloak clients
+export const hasKeycloakClientRole = clientRole => {
+    if (getKeycloakToken()) {
+        const { resourceAccess } = window.entando.keycloak;
+        if (resourceAccess) {
+            for (const client in resourceAccess) {
+                // eslint-disable-line no-unused-vars
+                const roles = resourceAccess[client].roles;
+                if (roles && roles.includes(clientRole)) {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+};
+
 export const getDefaultOptions = () => ({
   headers: new Headers({
       Authorization: `Bearer ${getKeycloakToken()}`,
