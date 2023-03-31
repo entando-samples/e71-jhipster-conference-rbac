@@ -12,10 +12,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import tech.jhipster.web.util.HeaderUtil;
 import tech.jhipster.web.util.ResponseUtil;
+
 
 /**
  * REST controller for managing {@link com.mycompany.myapp.domain.Conference}.
@@ -146,6 +148,7 @@ public class ConferenceResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of conferences in body.
      */
     @GetMapping("/conferences")
+    @PreAuthorize("hasAnyAuthority('conference-user','conference-admin')")
     public List<Conference> getAllConferences() {
         log.debug("REST request to get all Conferences");
         return conferenceRepository.findAll();
@@ -171,6 +174,7 @@ public class ConferenceResource {
      * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
      */
     @DeleteMapping("/conferences/{id}")
+    @PreAuthorize("hasAuthority('conference-admin')")
     public ResponseEntity<Void> deleteConference(@PathVariable Long id) {
         log.debug("REST request to delete Conference : {}", id);
         conferenceRepository.deleteById(id);

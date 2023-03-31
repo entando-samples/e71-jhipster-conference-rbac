@@ -1,76 +1,75 @@
 {
-    "microservices": [
+  "microservices": [
+    {
+      "name": "conference-ms",
+      "stack": "spring-boot",
+      "healthCheckPath": "/management/health",
+      "dbms": "postgresql",
+      "roles": ["conference-admin", "conference-user"]
+    }
+  ],
+  "microfrontends": [
+    {
+      "name": "conference-table",
+      "customElement": "conference-table",
+      "stack": "react",
+      "type": "widget",
+      "group": "free",
+      "publicFolder": "public",
+      "titles": {
+        "en": "E71 conference-table",
+        "it": "conference-table"
+      },
+      "apiClaims": [
         {
-            "name": "conference-ms",
-            "stack": "spring-boot",
-            "healthCheckPath": "/management/health",
-            "dbms": "postgresql"
+          "name": "conference-api",
+          "type": "internal",
+          "serviceName": "conference-ms"
         }
-    ],
-    "microfrontends": [
+      ]
+    },
+    {
+      "name": "conference-details",
+      "customElement": "conference-details",
+      "stack": "react",
+      "type": "widget",
+      "group": "free",
+      "publicFolder": "public",
+      "titles": {
+        "en": "E71 conference-details",
+        "it": "conference-details"
+      },
+      "apiClaims": [
         {
-            "name": "conference-table",
-            "customElement": "conference-table",
-            "stack": "react",
-            "type": "widget",
-            "group": "free",
-            "publicFolder": "public",
-            "titles": {
-                "en": "E71 conference-table",
-                "it": "conference-table"
-            },
-            "apiClaims": [
-                {
-                    "name": "conference-api",
-                    "type": "internal",
-                    "serviceName": "conference-ms"
-                }
-            ]
-        },
-        {
-            "name": "conference-details",
-            "customElement": "conference-details",
-            "stack": "react",
-            "type": "widget",
-            "group": "free",
-            "publicFolder": "public",
-            "titles": {
-                "en": "E71 conference-details",
-                "it": "conference-details"
-            },
-            "apiClaims": [
-                {
-                    "name": "conference-api",
-                    "type": "internal",
-                    "serviceName": "conference-ms"
-                }
-            ]
-        },
-        {
-            "name": "conference-form",
-            "customElement": "conference-form",
-            "stack": "react",
-            "type": "widget",
-            "group": "free",
-            "publicFolder": "public",
-            "titles": {
-                "en": "E71 conference-form",
-                "it": "conference-form"
-            },
-            "apiClaims": [
-                {
-                    "name": "conference-api",
-                    "type": "internal",
-                    "serviceName": "conference-ms"
-                }
-            ]
+          "name": "conference-api",
+          "type": "internal",
+          "serviceName": "conference-ms"
         }
-    ],
-    "svc": [
-        "keycloak"
-    ],
-    "name": "e71-jhipster-conference-rbac",
-    "version": "0.0.1",
-    "description": "E71 Jhipster Conference with RBAC controls",
-    "type": "bundle"
+      ]
+    },
+    {
+      "name": "conference-form",
+      "customElement": "conference-form",
+      "stack": "react",
+      "type": "widget",
+      "group": "free",
+      "publicFolder": "public",
+      "titles": {
+        "en": "E71 conference-form",
+        "it": "conference-form"
+      },
+      "apiClaims": [
+        {
+          "name": "conference-api",
+          "type": "internal",
+          "serviceName": "conference-ms"
+        }
+      ]
+    }
+  ],
+  "svc": ["keycloak"],
+  "name": "e71-jhipster-conference-rbac",
+  "version": "0.0.1",
+  "description": "E71 Jhipster Conference with RBAC controls",
+  "type": "bundle"
 }
